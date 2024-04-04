@@ -1,0 +1,24 @@
+img {
+  width: 143.28px;
+  height: 144px;
+}
+
+.circle-container {
+  display: flex;
+  align-items: center;
+}
+
+.circle {
+  border-radius: 50%;
+  width: 8px;
+  height: 8px;
+  margin: 5px;
+}
+
+.green {
+  background-color: #4CAF50;
+}
+
+.grey {
+  background-color: #9E9E9E;
+}
