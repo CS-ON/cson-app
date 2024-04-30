@@ -20,14 +20,9 @@ export class AppComponent {
         document.body.style.backgroundColor = backgroundColor;
       }
     });
-
-    this.mockDataInitService
-      .initializeData()
-      .then(() => {
-        console.log('Mock data initialized successfully!');
-      })
-      .catch((error) => {
-        console.error('Failed to initialize mock data:', error);
-      });
+    this.mockDataInitService.initializeData().subscribe({
+      next: () => console.log('Mock data initialized successfully!'),
+      error: (error) => console.error('Failed to initialize mock data:', error)
+    });
   }
 }
