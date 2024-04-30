@@ -12,6 +12,13 @@ const routes: Routes = [
             (module) => module.OnboardingModule
           ),
       },
+      {
+        path: 'main',
+        loadChildren: () =>
+          import('./features/main/main.module').then(
+            (module) => module.MainModule
+          ),
+      },
     ],
   },
 ];

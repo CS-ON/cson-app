@@ -8,7 +8,7 @@ export class MockDataInitializerService {
   constructor(private dbService: NgxIndexedDBService) {}
 
   async initializeData() {
-    // Añadir datos a la store de rewards
+
     const rewardIds = await Promise.all([
       this.dbService
         .add('rewards', {

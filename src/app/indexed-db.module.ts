@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { DBConfig } from 'ngx-indexed-db';
+import { DBConfig, NgxIndexedDBModule } from 'ngx-indexed-db';
 
 const dbConfig: DBConfig = {
   name: 'localDB',
@@ -38,7 +37,7 @@ const dbConfig: DBConfig = {
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    NgxIndexedDBModule.forRoot(dbConfig)
   ]
 })
 export class IndexedDBModule { }
