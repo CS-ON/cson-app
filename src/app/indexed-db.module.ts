@@ -11,6 +11,7 @@ const dbConfig: DBConfig = {
       storeSchema: [
         { name: 'name', keypath: 'name', options: { unique: false } },
         { name: 'description', keypath: 'description', options: { unique: false } },
+        { name: 'type', keypath: 'type', options: { unique: false } },
         { name: 'location', keypath: 'location', options: { unique: false } },
         { name: 'gallery', keypath: 'gallery', options: { unique: false } },
         { name: 'schedule', keypath: 'schedule', options: { unique: false } },

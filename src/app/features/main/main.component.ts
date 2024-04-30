@@ -15,7 +15,6 @@ export class MainComponent {
   ngOnInit() {
     this.dataService.getBusinesses().subscribe((result) => {
       console.log(result);
-
     })
   }
 
