@@ -18,8 +18,7 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner';
     RewardCardComponent,
     BusinessCardComponent,
     ScorePointsComponent,
-    ZXingScannerModule
   ],
-  imports: [MainRoutingModule, CommonModule],
+  imports: [MainRoutingModule, CommonModule, ZXingScannerModule],
 })
 export class MainModule {}
