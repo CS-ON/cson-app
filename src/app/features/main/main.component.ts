@@ -8,15 +8,11 @@ import { DataService } from 'src/app/services/data.service';
   templateUrl: './main.component.html',
 })
 export class MainComponent {
-
-
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
     this.dataService.getBusinesses().subscribe((result) => {
       console.log(result);
-    })
+    });
   }
-
-
- }
+}

@@ -8,7 +8,10 @@ import { MockDataInitializerService } from './services/mock-data-initializer.ser
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  constructor(private router: Router, private mockDataInitService: MockDataInitializerService) {}
+  constructor(
+    private router: Router,
+    private mockDataInitService: MockDataInitializerService
+  ) {}
 
   ngOnInit() {
     this.router.events.subscribe((event) => {
@@ -22,7 +25,7 @@ export class AppComponent {
     });
     this.mockDataInitService.initializeData().subscribe({
       next: () => console.log('Mock data initialized successfully!'),
-      error: (error) => console.error('Failed to initialize mock data:', error)
+      error: (error) => console.error('Failed to initialize mock data:', error),
     });
   }
 }
