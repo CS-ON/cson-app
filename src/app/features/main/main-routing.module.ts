@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main.component';
 import { ScorePointsComponent } from './pages/score-points/score-points.component';
 import { HowItWorks } from './pages/how-it-works/how-it-works.component';
+import { RewardsCenterComponent } from './pages/rewards-center/rewards-center.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
       {
         path: 'how-it-works',
         component: HowItWorks,
+      },
+      {
+        path: 'rewards-center',
+        component: RewardsCenterComponent,
       },
     ],
   },
