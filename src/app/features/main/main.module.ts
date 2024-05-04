@@ -8,6 +8,8 @@ import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
 import { ScorePointsComponent } from './pages/score-points/score-points.component';
 import { SharedModule } from '../shared/share.module';
+import { MainPageComponent } from './pages/main/main-page.component';
+
 
 @NgModule({
   declarations: [
@@ -16,6 +18,7 @@ import { SharedModule } from '../shared/share.module';
     RewardCardComponent,
     BusinessCardComponent,
     ScorePointsComponent,
+    MainPageComponent
   ],
   imports: [MainRoutingModule, CommonModule, ZXingScannerModule, SharedModule],
 })
