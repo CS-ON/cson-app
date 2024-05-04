@@ -4,12 +4,10 @@ import { Business } from '../interfaces/business.interface';
 import { Observable } from 'rxjs';
 import { Reward } from '../interfaces/reward.interface';
 
-
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
-
   constructor(private dbService: NgxIndexedDBService) {}
 
   addBusiness(business: Business) {

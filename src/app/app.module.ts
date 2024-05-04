@@ -6,14 +6,8 @@ import { AppComponent } from './app.component';
 import { IndexedDBModule } from './indexed-db.module';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    IndexedDBModule
-  ],
-  bootstrap: [AppComponent]
+  declarations: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule, IndexedDBModule],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

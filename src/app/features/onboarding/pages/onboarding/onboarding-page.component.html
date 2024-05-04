@@ -2,12 +2,20 @@
   <div class="flex items-center flex-auto justify-center">
     <img src="../../../../../assets/img/logo.png" />
   </div>
-  <div *ngIf="!viewModal" class="flex flex-col h-44 items-center justify-center">
+  <div
+    *ngIf="!viewModal"
+    class="flex flex-col h-44 items-center justify-center"
+  >
     <div class="bg-white py-1 w-11/12 gap-x-4 px-4 flex rounded-md">
-      <button class="bg-primary-color flex-auto py-2 rounded-md  ">Castellano</button>
-      <button class="flex-auto rounded-md ">Valencià</button>
+      <button class="bg-primary-color flex-auto py-2 rounded-md">
+        Castellano
+      </button>
+      <button class="flex-auto rounded-md">Valencià</button>
     </div>
-    <button (click)="openModal()" class="bg-primary-color w-11/12 mt-4 px-4 py-3 rounded-md">
+    <button
+      (click)="openModal()"
+      class="bg-primary-color w-11/12 mt-4 px-4 py-3 rounded-md"
+    >
       Continuar
     </button>
   </div>
