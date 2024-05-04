@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './main.component';
+import { HowItWorks } from './pages/how-it-works/how-it-works.component';
 
 const routes: Routes = [
   {
     path: '',
     component: MainComponent,
-    children: [],
+    children: [
+      {
+        path: 'how-it-works',
+        component: HowItWorks,
+      },
+    ],
   },
 ];
 
