@@ -1,9 +1,5 @@
-import {
-  Component,
-  Input
-} from '@angular/core';
-import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
-import { filter } from 'rxjs';
+import { Component, Input } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -15,10 +11,9 @@ export class NavbarComponent {
   isMainDirect = false;
 
   constructor(private router: Router, private route: ActivatedRoute) {
-    this.router.events
-      .pipe(filter((event) => event instanceof NavigationEnd))
-      .subscribe(() => {
-        this.isMainDirect = this.route.firstChild == null;
-      });
+    const url = this.router.url;
+    if (url === '/main') {
+      this.isMainDirect = true;
+    }
   }
 }

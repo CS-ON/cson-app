@@ -8,6 +8,7 @@ import { BannerPointsComponent } from './components/banner-points/banner-points.
 import { RewardCardComponent } from './components/reward-card/reward-card.component';
 import { ScorePointsComponent } from './pages/score-points/score-points.component';
 import { ZXingScannerModule } from '@zxing/ngx-scanner';
+import { MainPageComponent } from './pages/main/main-page.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { ZXingScannerModule } from '@zxing/ngx-scanner';
     RewardCardComponent,
     BusinessCardComponent,
     ScorePointsComponent,
+    MainPageComponent
   ],
   imports: [MainRoutingModule, CommonModule, ZXingScannerModule],
 })
