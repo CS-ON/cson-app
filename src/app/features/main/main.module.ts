@@ -5,9 +5,10 @@ import { MainRoutingModule } from './main-routing.module';
 import { MenuComponent } from '../menu/menu.component';
 import { MainComponent } from './main.component';
 import { BannerPointsComponent } from './components/banner-points/banner-points.component';
+import { RewardCardComponent } from './components/reward-card/reward-card.component';
 
 @NgModule({
-  declarations: [MenuComponent, MainComponent, NavbarComponent, BannerPointsComponent],
+  declarations: [MenuComponent, MainComponent, NavbarComponent, BannerPointsComponent, RewardCardComponent],
   imports: [MainRoutingModule, CommonModule],
 })
 export class MainModule {}
