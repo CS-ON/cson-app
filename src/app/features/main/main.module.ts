@@ -6,6 +6,9 @@ import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
 import { BannerPointsComponent } from './components/banner-points/banner-points.component';
 import { RewardCardComponent } from './components/reward-card/reward-card.component';
+import { ScorePointsComponent } from './pages/score-points/score-points.component';
+import { ZXingScannerModule } from '@zxing/ngx-scanner';
+
 
 @NgModule({
   declarations: [
@@ -14,7 +17,8 @@ import { RewardCardComponent } from './components/reward-card/reward-card.compon
     BannerPointsComponent,
     RewardCardComponent,
     BusinessCardComponent,
+    ScorePointsComponent,
   ],
-  imports: [MainRoutingModule, CommonModule],
+  imports: [MainRoutingModule, CommonModule, ZXingScannerModule],
 })
 export class MainModule {}

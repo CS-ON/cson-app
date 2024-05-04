@@ -9,8 +9,5 @@ export class MainComponent {
   constructor(private readonly dataService: DataService) {}
 
   ngOnInit() {
-    this.dataService.getBusinesses().subscribe((result) => {
-      console.log(result);
-    });
   }
 }
