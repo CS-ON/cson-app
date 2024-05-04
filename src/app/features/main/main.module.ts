@@ -3,13 +3,10 @@ import { MainComponent } from './main.component';
 import { CommonModule } from '@angular/common';
 import { MainRoutingModule } from './main-routing.module';
 
-
-const pages = []
+const pages = [];
 
 @NgModule({
-  declarations: [
-    MainComponent
-  ],
-  imports: [MainRoutingModule, CommonModule ]
+  declarations: [MainComponent],
+  imports: [MainRoutingModule, CommonModule],
 })
-export class MainModule { }
+export class MainModule {}

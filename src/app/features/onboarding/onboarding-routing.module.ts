@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { OnboardingComponent } from './onboarding.component';
 import { OnboardingPageComponent } from './pages/onboarding/onboarding-page.component';
 
-
 const routes: Routes = [
   {
     path: '',
@@ -11,15 +10,14 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        component: OnboardingPageComponent
-      }
-    ]
-  }
+        component: OnboardingPageComponent,
+      },
+    ],
+  },
 ];
-
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class OnboardingRoutingModule { }
+export class OnboardingRoutingModule {}
