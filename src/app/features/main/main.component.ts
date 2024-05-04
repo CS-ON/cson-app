@@ -11,8 +11,5 @@ export class MainComponent {
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
-    this.dataService.getBusinesses().subscribe((result) => {
-      console.log(result);
-    });
   }
 }
