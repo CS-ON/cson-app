@@ -1,9 +1,11 @@
-name: CI/CD
+name: Node.js CI
+
 on:
   push:
     branches-ignore: ""
   pull_request:
     branches-ignore: ""
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,7 +16,8 @@ jobs:
 
     steps:
       - run: echo "🔎 Running CI FOR branch ${{ github.ref }} on repository ${{ github.repository }}."
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
@@ -22,24 +25,3 @@ jobs:
           cache: "npm"
       - run: npm ci
       - run: npm run build --if-present
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-
-    if: github.ref == 'refs/heads/main'
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: "20.x"
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/<your-app-name>
