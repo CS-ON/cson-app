@@ -4,22 +4,22 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    children: [
-      {
-        path: 'onboarding',
-        loadChildren: () =>
-          import('./features/onboarding/onboarding.module').then(
-            (module) => module.OnboardingModule
-          ),
-      },
-      {
-        path: 'main',
-        loadChildren: () =>
-          import('./features/main/main.module').then(
-            (module) => module.MainModule
-          ),
-      },
-    ],
+    redirectTo: 'main',
+    pathMatch: 'full',
+  },
+  {
+    path: 'onboarding',
+    loadChildren: () =>
+      import('./features/onboarding/onboarding.module').then(
+        (module) => module.OnboardingModule
+      ),
+  },
+  {
+    path: 'main',
+    loadChildren: () =>
+      import('./features/main/main.module').then(
+        (module) => module.MainModule
+      ),
   },
 ];
 

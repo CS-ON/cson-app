@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { NgxIndexedDBService } from 'ngx-indexed-db';
-import { catchError, forkJoin, of, switchMap } from 'rxjs';
+import { catchError, of, switchMap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -9,10 +9,8 @@ export class MockDataInitializerService {
   constructor(private dbService: NgxIndexedDBService) {}
 
   initializeData() {
-    return this.dbService.count('rewards').pipe(
+    return this.dbService.count('businesses').pipe(
       switchMap((count) => {
-        console.log(count);
-
         if (count > 0) {
           console.log('Database already initialized.');
           return of(null);
