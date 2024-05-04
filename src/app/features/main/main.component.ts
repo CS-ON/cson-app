@@ -9,7 +9,6 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class MainComponent {
 
-
   constructor(private dataService: DataService) {}
 
   ngOnInit() {
@@ -17,6 +16,5 @@ export class MainComponent {
       console.log(result);
     })
   }
-
 
  }
