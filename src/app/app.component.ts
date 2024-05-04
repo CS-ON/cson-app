@@ -17,7 +17,7 @@ export class AppComponent {
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         let backgroundColor = '#ffffff';
-        if (event.urlAfterRedirects.includes('onboarding')) {
+        if (event.urlAfterRedirects.includes('onboarding') || event.urlAfterRedirects.includes('menu') ) {
           backgroundColor = '#111928';
         }
         document.body.style.backgroundColor = backgroundColor;

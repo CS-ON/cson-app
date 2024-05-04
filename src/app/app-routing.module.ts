@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { MenuComponent } from './features/menu/menu.component';
 
 const routes: Routes = [
   {
@@ -17,9 +18,11 @@ const routes: Routes = [
   {
     path: 'main',
     loadChildren: () =>
-      import('./features/main/main.module').then(
-        (module) => module.MainModule
-      ),
+      import('./features/main/main.module').then((module) => module.MainModule),
+  },
+  {
+    path: 'menu',
+    component: MenuComponent,
   },
 ];
 
