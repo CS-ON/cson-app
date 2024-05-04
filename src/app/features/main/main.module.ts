@@ -9,7 +9,6 @@ import { RewardCardComponent } from './components/reward-card/reward-card.compon
 
 @NgModule({
   declarations: [
-    MenuComponent,
     MainComponent,
     NavbarComponent,
     BannerPointsComponent,
