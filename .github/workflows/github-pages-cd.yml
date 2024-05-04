@@ -8,9 +8,9 @@ permissions:
 
 on:
   push:
-    branches: ["main"]
+    branches: ["feature/Implement-github-actions"]
   pull_request:
-    branches: ["main"]
+    branches: ["feature/Implement-github-actions"]
   workflow_dispatch:
 
 concurrency:
@@ -30,7 +30,7 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./
+          source: ./dist
           destination: ./_site
 
       - name: Upload artifact
