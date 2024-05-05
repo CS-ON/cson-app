@@ -5,9 +5,7 @@ import { RewardDetailComponent } from './reward-detail.component';
 import { SharedModule } from '../shared/share.module';
 
 @NgModule({
-  declarations: [
-    RewardDetailComponent,
-  ],
+  declarations: [RewardDetailComponent],
   imports: [RewardDetailRoutingModule, CommonModule, SharedModule],
 })
 export class RewardDetailModule {}
