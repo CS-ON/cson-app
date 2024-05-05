@@ -1,7 +1,7 @@
 import { OfferUser } from '../../interfaces/offer-user.interface';
 
 export type OfferUserFindFilters =
-  | Pick<OfferUser, 'userId'>
+  | Pick<Partial<OfferUser>, 'userId'>
   | {
       offerId?: string;
     };

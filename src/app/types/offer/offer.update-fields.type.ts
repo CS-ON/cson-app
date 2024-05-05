@@ -1,6 +1,6 @@
 import { Offer } from '../../interfaces/offer.interface';
 
 export type OfferUpdateFields = Pick<
-  Offer,
+  Partial<Offer>,
   'name' | 'description' | 'rewardPoints' | 'expirationDate'
 >;

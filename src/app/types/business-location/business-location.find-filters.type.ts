@@ -1,5 +1,5 @@
 import { BusinessLocation } from '../../interfaces/business-location.interface';
 
 export type BusinessLocationFindFilters =
-  | Pick<BusinessLocation, 'businessId'>
-  | { locationId: string };
+  | Pick<Partial<BusinessLocation>, 'businessId'>
+  | { locationId?: string };

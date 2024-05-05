@@ -1,6 +1,6 @@
 import { Suscription } from '../../interfaces/suscription.interface';
 
 export type SuscriptionUpdateFields = Pick<
-  Suscription,
+  Partial<Suscription>,
   'name' | 'maxOffersMonth' | 'monthPrice'
 >;

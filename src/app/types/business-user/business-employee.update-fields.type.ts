@@ -1,6 +1,6 @@
 import { BusinessEmployee } from '../../interfaces/business-employee.interface';
 
 export type BusinessEmployeeUpdateFields = Pick<
-  BusinessEmployee,
+  Partial<BusinessEmployee>,
   'name' | 'email'
 >;
