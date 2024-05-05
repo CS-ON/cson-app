@@ -1,6 +1,5 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { ZXingScannerModule } from '@zxing/ngx-scanner';
 import { BannerPointsComponent } from './components/banner-points/banner-points.component';
 import { BusinessCardComponent } from './components/business-card/business-card.component';
 import { RewardCardComponent } from './components/reward-card/reward-card.component';
