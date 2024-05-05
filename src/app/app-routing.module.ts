@@ -27,7 +27,16 @@ const routes: Routes = [
   {
     path: 'business',
     loadChildren: () =>
-      import('./features/business/business.module').then((module) => module.BusinessModule),
+      import('./features/business/business.module').then(
+        (module) => module.BusinessModule
+      ),
+  },
+  {
+    path: 'reward-detail',
+    loadChildren: () =>
+      import('./features/reward-detail/reward-detail.module').then(
+        (module) => module.RewardDetailModule
+      ),
   },
 ];
 

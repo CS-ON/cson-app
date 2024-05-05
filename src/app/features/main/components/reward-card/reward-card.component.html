@@ -1,24 +1,27 @@
-<div class="px-4 mb-3">
+<div (click)="navigateToRewardDetail()" class="px-4 mb-3">
   <div class="rounded-lg overflow-hidden shadow-lg">
     <div class="relative bg-dark">
       <img
+        [ngStyle]="redeemed ? {'filter': 'grayscale(1)'} : {}"
         class="w-full h-full object-cover"
         src="/assets/img/business/el-raco-del-cremaet/rewards/carajillo-premium.png"
         alt="Header image"
       />
-      <div
-        class="absolute inset-0 bg-dark bg-opacity-20 flex flex-col items-center justify-center px-4 py-6"
-      >
-        <img
-          class="w-16 mb-2"
-          src="/assets/img/business/el-raco-del-cremaet/logo.png"
-          alt="Logo"
-        />
-        <div class="text-white">
-          <div class="font-bold text-xl">El Racó del Cremaet</div>
-          <p class="text-sm">Calle de Vetusta 25, Castellón</p>
+      <ng-container *ngIf="!redeemed">
+        <div
+          class="absolute inset-0 bg-dark bg-opacity-20 flex flex-col items-center justify-center px-4 py-6"
+        >
+          <img
+            class="w-16 mb-2"
+            src="/assets/img/business/el-raco-del-cremaet/logo.png"
+            alt="Logo"
+          />
+          <div class="text-white">
+            <div class="font-bold text-xl">El Racó del Cremaet</div>
+            <p class="text-sm">Calle de Vetusta 25, Castellón</p>
+          </div>
         </div>
-      </div>
+      </ng-container>
     </div>
     <div class="px-6 py-4">
       <div class="font-bold text-xl mb-2">Cremaet Receta Secreta</div>
@@ -41,7 +44,7 @@
         </button>
       </ng-container>
       <ng-template #redeemedBlock>
-        <div class="relative bg-gray-2 w-full text-dark font-bold py-3 px-4 rounded flex align-center justify-center gap-4 overflow-hidden">
+        <div class="bg-gray-2 w-full text-dark font-bold py-3 px-4 rounded flex align-center justify-center gap-4 overflow-hidden">
           <span class="text-sm">Reclamada el 26-06-2024</span>
         </div>
       </ng-template>

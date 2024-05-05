@@ -5,3 +5,7 @@ button {
 button > div {
   transition: width 0.3s ease;
 }
+
+.redeemed{
+  filter: grayscale(1)
+}
