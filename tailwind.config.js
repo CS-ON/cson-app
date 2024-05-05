@@ -10,9 +10,10 @@ module.exports = {
         "dark-5": "#6B7280",
         gray: "#DFE4EA",
         "gray-2": "#F3F4F6",
-        green: " #13C296",
+        green: "#13C296",
         "green-dark": "#1A8245",
         stroke: "#DFE4EA",
+        white: "#FFFFFF",
       },
       boxShadow: {
         card: "0px 5px 12px 0px rgba(0, 0, 0, 0.1)",
