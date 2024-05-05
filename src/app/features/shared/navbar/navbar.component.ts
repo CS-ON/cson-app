@@ -16,4 +16,8 @@ export class NavbarComponent {
       this.isMainDirect = true;
     }
   }
+
+  navigateToMenu(): void {
+    this.router.navigate(['/menu']);
+  }
 }
