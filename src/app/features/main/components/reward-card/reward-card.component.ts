@@ -1,4 +1,3 @@
-// src/app/components/reward-card/reward-card.component.ts
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
 import { Router } from '@angular/router';
 
