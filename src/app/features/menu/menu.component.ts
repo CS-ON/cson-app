@@ -19,5 +19,9 @@ export class MenuComponent {
   navigateToHowItWorks(): void {
     this.router.navigate(['/main/how-it-works']);
   }
+  
+  navigateToBusinesses(): void {
+    this.router.navigate(['/business']);
+  }
 
 }
