@@ -1,9 +1,22 @@
-<app-navbar/>
+<app-navbar />
 <!-- <app-banner-points/> -->
 
-<div class="flex justify-center">
-  <div class="max-w-[720px] w-full">
-    <p>Hi!</p>
+<div class="max-w-[720px] w-full flex justify-center flex-col">
+  <div class="flex justify-center items-center bg-dark p-4">
+    <div class="flex bg-white h-12 w-80 items-center p-4 rounded">
+      <input type="text" placeholder="Buscar" class="w-full" />
+      <span class="material-symbols-outlined text-gray-2"> search </span>
+    </div>
   </div>
+  <div class="max-h-80">
+    <div
+      class="max-h-80"
+      style="height: 300px"
+      id="map"
+      leaflet
+      [leafletOptions]="options"
+    ></div>
+  </div>
+  <button>Seleccionar categorías</button>
 </div>
 <router-outlet />
