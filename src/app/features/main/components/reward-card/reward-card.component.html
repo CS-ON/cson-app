@@ -1,17 +1,13 @@
 <div class="px-4 mb-3">
-  <div class="mb-3">
-    <h3 class="text-3xl font-bold">Recompensas destacadas</h3>
-    <a class="text-green" href="#">Ver todas</a>
-  </div>
   <div class="rounded-lg overflow-hidden shadow-lg">
     <div class="relative bg-dark">
       <img
-        class="w-full"
+        class="w-full h-full object-cover"
         src="/assets/img/business/el-raco-del-cremaet/rewards/carajillo-premium.png"
         alt="Header image"
       />
       <div
-        class="absolute inset-0 bg-dark bg-opacity-20 flex flex-col items-center justify-center p-4"
+        class="absolute inset-0 bg-dark bg-opacity-20 flex flex-col items-center justify-center px-4 py-6"
       >
         <img
           class="w-16 mb-2"
@@ -31,11 +27,24 @@
         Secreta. Este brebaje, guardado bajo siete llaves, lleva c...
       </p>
     </div>
-    <!-- @todo ProgressBar -->
     <div class="px-6 pt-4 pb-2">
-      <button class="bg-green w-full text-dark font-bold py-3 px-4 rounded">
-        TODO PROGRESS BAR
-      </button>
+      <ng-container *ngIf="!redeemed; else redeemedBlock">
+        <button
+          class="relative bg-gray-2 w-full text-dark font-bold py-3 px-4 rounded flex align-center justify-center gap-4 overflow-hidden"
+        >
+          <div
+            class="absolute inset-0 bg-green"
+            [style.width]="progress + '%'"
+          ></div>
+          <img class="h-6 z-10" src="/assets/img/points.png" />
+          <span class="text-sm z-10">{{ currentPoints }} / {{ totalPoints }} puntos</span>
+        </button>
+      </ng-container>
+      <ng-template #redeemedBlock>
+        <div class="relative bg-gray-2 w-full text-dark font-bold py-3 px-4 rounded flex align-center justify-center gap-4 overflow-hidden">
+          <span class="text-sm">Reclamada el 26-06-2024</span>
+        </div>
+      </ng-template>
     </div>
   </div>
 </div>

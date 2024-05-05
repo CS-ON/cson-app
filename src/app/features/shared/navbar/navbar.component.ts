@@ -6,7 +6,7 @@ import { ActivatedRoute, Router } from '@angular/router';
   templateUrl: './navbar.component.html',
 })
 export class NavbarComponent {
-  @Input() points = 1987;
+  @Input() points = 1987; // @todo Pablo: Global point counter. store?
 
   isMainDirect = false;
 
@@ -15,5 +15,9 @@ export class NavbarComponent {
     if (url === '/main') {
       this.isMainDirect = true;
     }
+  }
+
+  navigateToMenu(): void {
+    this.router.navigate(['/menu']);
   }
 }
