@@ -24,6 +24,11 @@ const routes: Routes = [
     path: 'menu',
     component: MenuComponent,
   },
+  {
+    path: 'business',
+    loadChildren: () =>
+      import('./features/business/business.module').then((module) => module.BusinessModule),
+  },
 ];
 
 @NgModule({
