@@ -1,5 +1,6 @@
 // src/app/components/reward-card/reward-card.component.ts
 import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-reward-card',
@@ -7,11 +8,17 @@ import { Component, ChangeDetectionStrategy, Input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class RewardCardComponent {
+  constructor(private router: Router) {}
+
   @Input() totalPoints: number = 1000;
   @Input() redeemed: boolean = false;
   currentPoints: number = 328; // @todo Pablo: Global point counter. store?
 
   get progress(): number {
     return (this.currentPoints / this.totalPoints) * 100;
+  }
+
+  navigateToRewardDetail(): void {
+    this.router.navigate(['/reward-detail']);
   }
 }
