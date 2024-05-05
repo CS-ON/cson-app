@@ -1,4 +1,5 @@
 import { BusinessLocation } from './business-location.interface';
+import { OfferBonus } from './offer-bonus.interface';
 
 export interface Offer {
   id: string;
@@ -7,4 +8,5 @@ export interface Offer {
   businessLocation: BusinessLocation;
   rewardPoints: number;
   expirationDate?: Date;
+  bonus?: OfferBonus;
 }
