@@ -8,6 +8,7 @@ import { MainRoutingModule } from './main-routing.module';
 import { MainComponent } from './main.component';
 import { RewardsCenterComponent } from './pages/rewards-center/rewards-center.component';
 import { ScorePointsComponent } from './pages/score-points/score-points.component';
+import { MainHeaderComponent } from './components/main-header/main-header.component';
 
 import { MainPageComponent } from './pages/main/main-page.component';
 
@@ -19,7 +20,8 @@ import { MainPageComponent } from './pages/main/main-page.component';
     RewardCardComponent,
     ScorePointsComponent,
     MainPageComponent,
-    RewardsCenterComponent
+    RewardsCenterComponent,
+    MainHeaderComponent,
   ],
   imports: [MainRoutingModule, CommonModule, ZXingScannerModule, SharedModule],
 })
