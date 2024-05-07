@@ -25,6 +25,13 @@ const routes: Routes = [
     component: MenuComponent,
   },
   {
+    path: 'shopping',
+    loadChildren: () =>
+      import('./features/shopping/shopping.module').then(
+        (module) => module.ShoppingModule
+      ),
+  },
+  {
     path: 'business',
     loadChildren: () =>
       import('./features/business/business.module').then(

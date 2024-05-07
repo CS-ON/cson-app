@@ -20,8 +20,8 @@ export class MenuComponent {
     this.router.navigate(['/main/how-it-works']);
   }
 
-  navigateToBusinesses(): void {
-    this.router.navigate(['/business']);
+  navigateToShopping(): void {
+    this.router.navigate(['/shopping']);
   }
 
 }
