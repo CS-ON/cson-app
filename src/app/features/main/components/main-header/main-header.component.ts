@@ -8,8 +8,8 @@ import { Router } from '@angular/router';
 })
 export class MainHeaderComponent {
   constructor(private router: Router) {}
-  navigateToBusinesses(): void {
-    this.router.navigate(['/business']);
+  navigateToShopping(): void {
+    this.router.navigate(['/shopping']);
   }
   navigateToScorePoints(): void {
     this.router.navigate(['main/score-points']);
