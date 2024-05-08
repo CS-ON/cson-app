@@ -32,16 +32,7 @@
     </div>
     <div class="px-6 pt-4 pb-2">
       <ng-container *ngIf="!redeemed; else redeemedBlock">
-        <button
-          class="relative bg-gray-2 w-full text-dark font-bold py-3 px-4 rounded flex align-center justify-center gap-4 overflow-hidden"
-        >
-          <div
-            class="absolute inset-0 bg-green"
-            [style.width]="progress + '%'"
-          ></div>
-          <img class="h-6 z-10" src="/assets/img/points.png" />
-          <span class="text-sm z-10">{{ currentPoints }} / {{ totalPoints }} puntos</span>
-        </button>
+        <app-progress-bar [totalPoints]="totalPoints"></app-progress-bar>
       </ng-container>
       <ng-template #redeemedBlock>
         <div class="bg-gray-2 w-full text-dark font-bold py-3 px-4 rounded flex align-center justify-center gap-4 overflow-hidden">
