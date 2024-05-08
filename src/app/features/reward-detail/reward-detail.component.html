@@ -1,19 +1,18 @@
 <app-navbar />
 <div class="bg-dark">
   <img
-    class="w-full"
-    src="assets/img/business/el-raco-del-cremaet/rewards/carajillo-premium.png"
+    class="w-full object-cover object-center max-h-56"
+    src="assets/img/business/el-raco-del-cremaet/gallery/04.png"
   />
 </div>
 <div class="bg-dark text-white text-center pt-6 pb-12 px-4 relative">
   <h1 class="text-2xl font-bold mb-3">Cremaet Receta Secreta</h1>
-  <p>Válida hasta el 14-05-2024</p>
-  <button class="bg-green py-3 text-dark w-full rounded my-3">
-    Reutilizar progressbar
-  </button>
-  <!-- @todo sacara componente el progress bar de card de recompensas y reutilizar aqui -->
   <p class="font-bold">El Racó del Cremaet</p>
   <p>Calle de Vetusta 25. Castellón</p>
+  <div class="my-4">
+    <app-progress-bar [totalPoints]="1000"></app-progress-bar>
+  </div>
+  <p>Válida hasta el 14-05-2024</p>
   <div
     class="header-shape flex absolute"
     style="background-image: url('/assets/img/rewards/triangle.svg')"
@@ -22,7 +21,7 @@
 
 <div class="px-4 pt-6 pb-8 flex flex-col gap-8">
   <button
-  (click)="navigateToBusiness()"
+    (click)="navigateToBusiness()"
     class="border border-stroke text-dark bg-gray-2 flex items-center justify-between rounded-lg p-4 w-full"
   >
     <div class="flex items-center gap-2">

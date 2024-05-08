@@ -1,0 +1,11 @@
+<button
+  class="relative bg-gray-2 w-full text-dark font-bold py-3 px-4 rounded flex items-center justify-center gap-4 overflow-hidden"
+>
+  <div
+    class="absolute inset-0 bg-green"
+    [style.width]="progress + '%'"
+  ></div>
+  <img class="h-6 z-10" src="/assets/img/logo_puntos.png" />
+  <span class="text-sm z-10">{{ currentPoints }} / {{ totalPoints }} puntos</span>
+</button>
+

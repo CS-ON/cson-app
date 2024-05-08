@@ -11,11 +11,7 @@ export class RewardCardComponent {
 
   @Input() totalPoints: number = 1000;
   @Input() redeemed: boolean = false;
-  currentPoints: number = 328; // @todo Pablo: Global point counter. store?
-
-  get progress(): number {
-    return (this.currentPoints / this.totalPoints) * 100;
-  }
+  currentPoints: number = 328;
 
   navigateToRewardDetail(): void {
     this.router.navigate(['/reward-detail']);
