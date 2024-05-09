@@ -4,17 +4,17 @@
     Canjea tus PUNTOS y consigue recompensas en los comercios de Castellón.
     Consulta tus recompensas canjeadas.
   </p>
-  <div class="header-shape flex absolute" style="background-image: url('/assets/img/rewards/triangle.svg')"></div>
+  <div class="header-shape flex absolute" style="background-image: url('assets/img/rewards/triangle.svg')"></div>
 </div>
 
 <div class="flex flex-col gap-6 pt-4">
   <div class="flex flex-row gap-4 px-4">
     <button class="py-2 px-4 rounded-lg w-full"
-            [ngClass]="{'bg-green': !showRedeemed, 'bg-gray-2 border-stroke': showRedeemed}"
-            (click)="toggleView(false)">Activas (12)</button>
+      [ngClass]="{'bg-green': !showRedeemed, 'bg-gray-2 border-stroke': showRedeemed}"
+      (click)="toggleView(false)">Activas (12)</button>
     <button class="py-2 px-4 rounded-lg w-full"
-            [ngClass]="{'bg-green': showRedeemed, 'bg-gray-2 border-stroke': !showRedeemed}"
-            (click)="toggleView(true)">Canjeadas (3)</button>
+      [ngClass]="{'bg-green': showRedeemed, 'bg-gray-2 border-stroke': !showRedeemed}"
+      (click)="toggleView(true)">Canjeadas (3)</button>
   </div>
   <div class="flex justify-center">
     <a class="text-green" href="#">Seleccionar categorías</a>
@@ -26,8 +26,8 @@
     <app-reward-card [totalPoints]="1575" [redeemed]="false" />
   </div>
   <div *ngIf="showRedeemed" id="redeemed-rewards">
-    <app-reward-card [totalPoints]="650" [redeemed]="true"/>
-    <app-reward-card [totalPoints]="900" [redeemed]="true"/>
-    <app-reward-card [totalPoints]="1250" [redeemed]="true"/>
+    <app-reward-card [totalPoints]="650" [redeemed]="true" />
+    <app-reward-card [totalPoints]="900" [redeemed]="true" />
+    <app-reward-card [totalPoints]="1250" [redeemed]="true" />
   </div>
 </div>
