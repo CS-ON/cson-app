@@ -8,8 +8,7 @@ import { Router } from '@angular/router';
 export class HowItWorks {
   constructor(private readonly router: Router) {}
 
-goToMenu() {
-  this.router.navigate(['/menu'])
+  goToMenu() {
+    this.router.navigate(['/main']);
+  }
 }
-
- }
