@@ -1,5 +1,5 @@
-<app-navbar/>
-<div class="flex justify-center">
+<app-navbar (isMenuOpen)="isMenuOpen($event)"/>
+<div *ngIf="!menuOpen" class="flex justify-center">
   <div class="max-w-[720px] w-full">
     <router-outlet />
   </div>

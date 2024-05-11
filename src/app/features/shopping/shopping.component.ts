@@ -15,6 +15,12 @@ export class ShoppingComponent {
 
   constructor(private readonly dataService: DataService) {}
   ngOnInit() {}
+
+  menuOpen = false;
+
+  isMenuOpen(isToggled: boolean): void {
+    this.menuOpen = isToggled;
+  }
 }
 
 export const getLayers = (): Leaflet.Layer[] => {
