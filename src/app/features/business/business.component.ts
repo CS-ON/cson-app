@@ -5,4 +5,10 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   templateUrl: './business.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class BusinessComponent {}
+export class BusinessComponent {
+  menuOpen = false;
+
+  isMenuOpen(isToggled: boolean): void {
+    this.menuOpen = isToggled;
+  }
+}

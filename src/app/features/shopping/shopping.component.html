@@ -1,25 +1,27 @@
-<app-navbar />
+<app-navbar (isMenuOpen)="isMenuOpen($event)" />
 <!-- <app-banner-points/> -->
-
-<div class="max-w-[720px] w-full flex justify-center flex-col">
-  <div class="flex justify-center items-center bg-dark p-4">
-    <div class="flex bg-white h-12 w-full items-center p-4 rounded-lg">
-      <input type="text" placeholder="Buscar" class="w-full" />
-      <span class="material-symbols-outlined text-dark-5"> search </span>
+<div *ngIf="!menuOpen">
+  <div class="max-w-[720px] w-full flex justify-center flex-col">
+    <div class="flex justify-center items-center bg-dark p-4">
+      <div class="flex bg-white h-12 w-full items-center p-4 rounded-lg">
+        <input type="text" placeholder="Buscar" class="w-full" />
+        <span class="material-symbols-outlined text-dark-5"> search </span>
+      </div>
     </div>
+    <div class="max-h-80">
+      <div
+        class="max-h-80"
+        style="height: 300px"
+        id="map"
+        leaflet
+        [leafletOptions]="options"
+      ></div>
+    </div>
+    <button class="text-green p-4 font-medium">Seleccionar categorías</button>
+    <app-business-card></app-business-card>
+    <app-business-card></app-business-card>
+    <app-business-card></app-business-card>
   </div>
-  <div class="max-h-80">
-    <div
-      class="max-h-80"
-      style="height: 300px"
-      id="map"
-      leaflet
-      [leafletOptions]="options"
-    ></div>
-  </div>
-  <button class="text-green p-4 font-medium">Seleccionar categorías</button>
-  <app-business-card></app-business-card>
-  <app-business-card></app-business-card>
-  <app-business-card></app-business-card>
+  <router-outlet />
+
 </div>
-<router-outlet />

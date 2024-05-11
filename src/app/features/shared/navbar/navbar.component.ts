@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import {Location} from '@angular/common';
 
@@ -13,6 +13,8 @@ export class NavbarComponent {
 
   menuOpen = false;
 
+  @Output() isMenuOpen: EventEmitter<boolean> = new EventEmitter<boolean>();
+
   constructor(private router: Router, private route: ActivatedRoute, private location: Location) {
     const url = this.router.url;
     if (url === '/main') {
@@ -24,25 +26,30 @@ export class NavbarComponent {
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
+    this.isMenuOpen.emit(this.menuOpen)
   }
 
   navigateToRewardsCenter(): void {
     this.menuOpen = false;
+    this.isMenuOpen.emit(this.menuOpen)
     this.router.navigate(['/main/rewards-center']);
   }
 
   navigateToMain(): void {
     this.menuOpen = false;
+    this.isMenuOpen.emit(this.menuOpen)
     this.router.navigate(['/']);
   }
 
   navigateToHowItWorks(): void {
     this.menuOpen = false;
+    this.isMenuOpen.emit(this.menuOpen)
     this.router.navigate(['/main/how-it-works']);
   }
 
   navigateToShopping(): void {
     this.menuOpen = false;
+    this.isMenuOpen.emit(this.menuOpen)
     this.router.navigate(['/shopping']);
   }
 

@@ -7,9 +7,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./reward-detail.component.scss'],
 })
 export class RewardDetailComponent {
+
+  menuOpen = false;
+
   constructor(private router: Router) {}
 
   navigateToBusiness(): void {
     this.router.navigate(['/business']);
+  }
+
+
+  isMenuOpen(isToggled: boolean): void {
+    this.menuOpen = isToggled;
   }
 }
