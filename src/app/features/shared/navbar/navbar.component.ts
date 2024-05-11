@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import {Location} from '@angular/common';
 
 @Component({
   selector: 'app-navbar',
@@ -10,14 +11,42 @@ export class NavbarComponent {
 
   isMainDirect = false;
 
-  constructor(private router: Router, private route: ActivatedRoute) {
+  menuOpen = false;
+
+  constructor(private router: Router, private route: ActivatedRoute, private location: Location) {
     const url = this.router.url;
     if (url === '/main') {
       this.isMainDirect = true;
     }
   }
 
-  navigateToMenu(): void {
-    this.router.navigate(['/menu']);
+
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
+  navigateToRewardsCenter(): void {
+    this.menuOpen = false;
+    this.router.navigate(['/main/rewards-center']);
+  }
+
+  navigateToMain(): void {
+    this.menuOpen = false;
+    this.router.navigate(['/']);
+  }
+
+  navigateToHowItWorks(): void {
+    this.menuOpen = false;
+    this.router.navigate(['/main/how-it-works']);
+  }
+
+  navigateToShopping(): void {
+    this.menuOpen = false;
+    this.router.navigate(['/shopping']);
+  }
+
+  onClickGoBack(): void {
+    this.location.back()
   }
 }
