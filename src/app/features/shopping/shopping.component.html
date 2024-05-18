@@ -18,9 +18,16 @@
       ></div>
     </div>
     <button class="text-green p-4 font-medium">Seleccionar categorías</button>
-    <app-business-card></app-business-card>
-    <app-business-card></app-business-card>
-    <app-business-card></app-business-card>
+    <div *ngIf="businesses$ | async as businesses;">
+      <div *ngFor="let business of businesses" >
+        <div class="mb-2">
+          <app-business-card [bussiness]="business"></app-business-card>
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
   <router-outlet />
 
