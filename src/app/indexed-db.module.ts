@@ -7,7 +7,7 @@ const dbConfig: DBConfig = {
   objectStoresMeta: [
     {
       store: 'businesses',
-      storeConfig: { keyPath: 'id', autoIncrement: true },
+      storeConfig: { keyPath: 'id', autoIncrement: false },
       storeSchema: [
         { name: 'name', keypath: 'name', options: { unique: false } },
         {
@@ -28,7 +28,7 @@ const dbConfig: DBConfig = {
     },
     {
       store: 'rewards',
-      storeConfig: { keyPath: 'id', autoIncrement: true },
+      storeConfig: { keyPath: 'id', autoIncrement: false },
       storeSchema: [
         { name: 'name', keypath: 'name', options: { unique: false } },
         {
