@@ -10,6 +10,7 @@ import { ScorePointsComponent } from './pages/score-points/score-points.componen
 import { MainHeaderComponent } from './components/main-header/main-header.component';
 
 import { MainPageComponent } from './pages/main/main-page.component';
+import { ObtainPointsComponent } from './pages/obtain-points/obtain-points.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { MainPageComponent } from './pages/main/main-page.component';
     MainPageComponent,
     RewardsCenterComponent,
     MainHeaderComponent,
+    ObtainPointsComponent,
   ],
   imports: [MainRoutingModule, CommonModule, ZXingScannerModule, SharedModule],
 })

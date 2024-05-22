@@ -5,6 +5,7 @@ import { ScorePointsComponent } from './pages/score-points/score-points.componen
 import { HowItWorks } from './pages/how-it-works/how-it-works.component';
 import { MainPageComponent } from './pages/main/main-page.component';
 import { RewardsCenterComponent } from './pages/rewards-center/rewards-center.component';
+import { ObtainPointsComponent } from './pages/obtain-points/obtain-points.component';
 
 const routes: Routes = [
   {
@@ -18,6 +19,10 @@ const routes: Routes = [
       {
         path: 'score-points',
         component: ScorePointsComponent
+      },
+      {
+        path: 'obtain-points',
+        component: ObtainPointsComponent
       },
       {
         path: 'how-it-works',
