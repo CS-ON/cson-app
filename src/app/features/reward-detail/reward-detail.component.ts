@@ -10,10 +10,16 @@ export class RewardDetailComponent {
 
   menuOpen = false;
 
+  isReclamed = true;
+
   constructor(private router: Router) {}
 
   navigateToBusiness(): void {
     this.router.navigate(['/business']);
+  }
+
+  isReclamedOutput(isReclamed:boolean){
+    this.isReclamed = isReclamed;
   }
 
 
