@@ -1,8 +1,8 @@
 <div (click)="navigateToRewardDetail()" class="mb-3">
   <div class="rounded-lg overflow-hidden shadow-lg">
     <div class="relative bg-dark">
-      <img [ngStyle]="redeemed ? {'filter': 'grayscale(1)'} : {}" class="w-full h-full object-cover"
-        src="assets/img/business/el-raco-del-cremaet/rewards/carajillo-premium.webp" alt="Header image" />
+      <img [ngStyle]="redeemed ? {'filter': 'grayscale(1)'} : {}" class="opacity-30 w-full h-full object-cover"
+        src="{{image}}" alt="Header image" />
       <ng-container *ngIf="!redeemed">
         <div class="absolute inset-0 bg-dark bg-opacity-20 flex flex-col items-center justify-center px-4 py-6">
           <img class="w-16 mb-2 rounded-full" src="assets/img/business/el-raco-del-cremaet/logo.webp" alt="Logo" />
@@ -14,7 +14,7 @@
       </ng-container>
     </div>
     <div class="px-6 py-4">
-      <div class="font-bold text-xl mb-2">Cremaet Receta Secreta</div>
+      <div class="font-bold text-xl mb-2">{{name}}</div>
       <p class="text-gray-700 text-base">
         Sumérgete en el misterio y la tradición con nuestro Cremaet de Receta
         Secreta. Este brebaje, guardado bajo siete llaves, lleva c...
