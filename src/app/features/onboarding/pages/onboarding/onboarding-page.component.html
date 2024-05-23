@@ -1,53 +1,29 @@
 <div class="flex flex-col h-screen">
   <div class="flex items-center flex-auto justify-center">
-    <img src="../../../../../assets/img/logo.png" />
+    <img src="assets/img/logo.png" />
   </div>
-  <div
-    *ngIf="!viewModal"
-    class="flex flex-col h-44 items-center justify-center"
-  >
+  <div *ngIf="!viewModal" class="flex flex-col h-44 items-center justify-center">
     <div class="bg-white py-1 w-11/12 gap-x-4 px-4 flex rounded-md">
       <button class="bg-primary-color flex-auto py-2 rounded-md">
         Castellano
       </button>
       <button class="flex-auto rounded-md">Valencià</button>
     </div>
-    <button
-      (click)="openModal()"
-      class="bg-primary-color w-11/12 mt-4 px-4 py-3 rounded-md"
-    >
+    <button (click)="openModal()" class="bg-primary-color w-11/12 mt-4 px-4 py-3 rounded-md">
       Continuar
     </button>
   </div>
-  <div
-    *ngIf="viewModal"
-    class="flex flex-col bg-white px-4 rounded-md pt-6"
-    style="height: 465px"
-  >
+  <div *ngIf="viewModal" class="flex flex-col bg-white px-4 rounded-md pt-6" style="height: 465px">
     <div *ngFor="let text of textsData">
-      <app-onboarding-card
-        *ngIf="text.isVisible"
-        [title]="text.title"
-        [description]="text.description"
-      ></app-onboarding-card>
+      <app-onboarding-card *ngIf="text.isVisible" [title]="text.title"
+        [description]="text.description"></app-onboarding-card>
     </div>
 
     <div class="flex items-center h-full justify-between">
       <div>
-        <svg
-          *ngIf="!textsData[0].isVisible"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="w-6 h-6"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
-          />
+        <svg *ngIf="!textsData[0].isVisible" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+          stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18" />
         </svg>
       </div>
       <div class="flex justify-center h-full items-center">
@@ -58,19 +34,9 @@
       </div>
       <div>
         <p *ngIf="!textsData[3].isVisible">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3"
-            />
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+            stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
           </svg>
         </p>
         <p *ngIf="textsData[3].isVisible">¡Empezar!</p>

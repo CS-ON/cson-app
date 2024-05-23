@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { timeout } from 'rxjs';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -6,8 +7,12 @@ import { DataService } from 'src/app/services/data.service';
   templateUrl: './main.component.html',
 })
 export class MainComponent {
-  constructor(private readonly dataService: DataService) {}
 
-  ngOnInit() {
+  menuOpen = false;
+
+  isMenuOpen(isToggled: boolean): void {
+    this.menuOpen = isToggled;
   }
+
+
 }

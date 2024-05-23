@@ -1,10 +1,15 @@
+import { BusinessType } from '../enums/business.type.enum';
+import { Reward } from './reward.interface';
+import { Suscription } from './suscription.interface';
+
 export interface Business {
-  id?: number;
+  id: string;
   name: string;
   description: string;
-  type: string;
+  type: BusinessType;
+  suscription?: Suscription;
+  schedule: string;
+  gallery?: string[];
   location: string;
-  gallery: string[];
-  schedule: Date;
-  rewards: number[];
+  rewards: Reward[]
 }

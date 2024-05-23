@@ -18,6 +18,10 @@ export class DataService {
     return this.dbService.getAll('businesses');
   }
 
+  getBusinessesById(id: number): Observable<Business> {
+    return this.dbService.getByID('businesses', id)
+  }
+
   addReward(reward: Reward) {
     return this.dbService.add('rewards', reward);
   }

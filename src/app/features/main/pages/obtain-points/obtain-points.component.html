@@ -1,0 +1,20 @@
+<div class="text-white flex flex-col h-screen bg-dark-2 justify-center max-content">
+  <div class="flex flex-col items-center gap-6 p-4">
+    <img
+      class="max-w-36 h-auto"
+      src="assets/img/logo_puntos.png"
+      alt="puntos"
+    />
+    <h1 class="font-normal">Has conseguido</h1>
+    <h1 class="text-2xl font-semibold">{{ newPoints }} PUNTOS</h1>
+  </div>
+
+  <div class="flex w-full fixed bottom-8 justify-center">
+    <button
+      (click)="goToMain()"
+      class="bg-green py-2 text-2xl rounded-md w-80 font-medium text-dark-2"
+    >
+      Continuar
+    </button>
+  </div>
+</div>

@@ -14,6 +14,9 @@ export class AppComponent {
   ) {}
 
   ngOnInit() {
+    this.mockDataInitService.initializeData().subscribe(() => {
+      console.log('Data initialization complete.');
+    });
     this.router.events.subscribe((event) => {
       if (event instanceof NavigationEnd) {
         let backgroundColor = '#ffffff';
@@ -23,6 +26,6 @@ export class AppComponent {
         document.body.style.backgroundColor = backgroundColor;
       }
     });
-    this.mockDataInitService.initializeData();
+
   }
 }

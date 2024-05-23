@@ -1,12 +1,7 @@
-<app-navbar />
-<!-- <app-banner-points/> -->
-
-<div class="flex justify-center">
+<app-navbar (isMenuOpen)="isMenuOpen($event)"/>
+<div *ngIf="!menuOpen" class="flex justify-center">
   <div class="max-w-[720px] w-full">
-    <app-stats-carrusel />
-    <app-business-card />
-    <app-banner-points />
-    <app-reward-card />
+    <router-outlet />
   </div>
 </div>
-<router-outlet />
+

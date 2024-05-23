@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { MenuComponent } from './features/menu/menu.component';
 
 const routes: Routes = [
   {
@@ -21,8 +20,25 @@ const routes: Routes = [
       import('./features/main/main.module').then((module) => module.MainModule),
   },
   {
-    path: 'menu',
-    component: MenuComponent,
+    path: 'shopping',
+    loadChildren: () =>
+      import('./features/shopping/shopping.module').then(
+        (module) => module.ShoppingModule
+      ),
+  },
+  {
+    path: 'business',
+    loadChildren: () =>
+      import('./features/business/business.module').then(
+        (module) => module.BusinessModule
+      ),
+  },
+  {
+    path: 'reward-detail',
+    loadChildren: () =>
+      import('./features/reward-detail/reward-detail.module').then(
+        (module) => module.RewardDetailModule
+      ),
   },
 ];
 
