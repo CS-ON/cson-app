@@ -21,13 +21,13 @@
     <!-- @todo Selección de categorías -->
   </div>
   <div *ngIf="!showRedeemed" id="active-rewards">
-    <app-reward-card [totalPoints]="800" [redeemed]="false" />
-    <app-reward-card [totalPoints]="650" [redeemed]="false" />
-    <app-reward-card [totalPoints]="1575" [redeemed]="false" />
+<app-reward-card [totalPoints]="800" [redeemed]="false" image="assets/img/business/el-raco-del-cremaet/rewards/01.webp" name="Cremaet Receta Secreta" />
+<app-reward-card [totalPoints]="800" [redeemed]="false" image="assets/img/business/el-raco-del-cremaet/rewards/02.webp" name="Cremaet Premium" />
+<app-reward-card [totalPoints]="800" [redeemed]="false" image="assets/img/business/el-raco-del-cremaet/rewards/03.webp" name="Mystic Burn" />
   </div>
   <div *ngIf="showRedeemed" id="redeemed-rewards">
-    <app-reward-card [totalPoints]="650" [redeemed]="true" />
-    <app-reward-card [totalPoints]="900" [redeemed]="true" />
-    <app-reward-card [totalPoints]="1250" [redeemed]="true" />
+<app-reward-card [totalPoints]="800" [redeemed]="true" image="assets/img/business/el-raco-del-cremaet/rewards/01.webp" name="Cremaet Receta Secreta" />
+<app-reward-card [totalPoints]="800" [redeemed]="true" image="assets/img/business/el-raco-del-cremaet/rewards/02.webp" name="Cremaet Premium" />
+<app-reward-card [totalPoints]="800" [redeemed]="true" image="assets/img/business/el-raco-del-cremaet/rewards/03.webp" name="Mystic Burn" />
   </div>
 </div>
