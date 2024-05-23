@@ -60,12 +60,13 @@ export const businessesMock = [
     description:
       'Librería La Pluma Dorada es un refugio para los amantes de la lectura en Castellón. Este encantador espacio ofrece una cuidada selección de libros que abarca desde los clásicos inmortales hasta las últimas novedades literarias. Nuestra librería no solo es un lugar para comprar libros, sino un lugar donde los lectores pueden encontrar inspiración y compartir su pasión por la literatura. Organizamos eventos literarios, firmas de libros y talleres que enriquecen la vida cultural de nuestra comunidad.',
     location: 'Calle de la Paz 7, Castellón',
-    logo: 'assets/img/business/el-raco-del-cremaet/logo.png',
+    logo: 'assets/img/business/la-pluma-dorada/logo.webp',
     gallery: [
-      'assets/img/business/el-raco-del-cremaet/gallery/01.png',
-      'assets/img/business/el-raco-del-cremaet/gallery/02.png',
-      'assets/img/business/el-raco-del-cremaet/gallery/03.png',
-      'assets/img/business/el-raco-del-cremaet/gallery/04.png',
+      'assets/img/business/la-pluma-dorada/gallery/01.webp',
+      'assets/img/business/la-pluma-dorada/gallery/02.webp',
+      'assets/img/business/la-pluma-dorada/gallery/03.webp',
+      'assets/img/business/la-pluma-dorada/gallery/04.webp',
+      'assets/img/business/la-pluma-dorada/gallery/05.webp',
     ],
     type: 'Librería',
     schedule: '19:00',
