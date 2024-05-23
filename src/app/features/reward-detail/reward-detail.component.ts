@@ -7,10 +7,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./reward-detail.component.scss'],
 })
 export class RewardDetailComponent {
-
   menuOpen = false;
 
   isReclamed = true;
+
+  isQrCode = false;
 
   constructor(private router: Router) {}
 
@@ -18,10 +19,10 @@ export class RewardDetailComponent {
     this.router.navigate(['/business']);
   }
 
-  isReclamedOutput(isReclamed:boolean){
-    this.isReclamed = isReclamed;
+  isReclamedOutput(isReclamed: boolean){
+    this.isReclamed = true;
+    this.isQrCode = isReclamed;
   }
-
 
   isMenuOpen(isToggled: boolean): void {
     this.menuOpen = isToggled;

@@ -11,9 +11,13 @@
       <h1 class="text-2xl font-bold mb-3">Cremaet Receta Secreta</h1>
       <p class="font-bold">El Racó del Cremaet</p>
       <p>Calle de Vetusta 25. Castellón</p>
-      <div class="my-4">
+      <div class="my-4" (click)="isReclamed = false" *ngIf="!isQrCode">
         <app-progress-bar [totalPoints]="400"></app-progress-bar>
       </div>
+      <div class="flex justify-center my-4" *ngIf="isQrCode">
+        <img src="assets/img/qrCode.png" />
+      </div>
+
       <p>Válida hasta el 14-05-2024</p>
       <div
         class="header-shape flex absolute"
