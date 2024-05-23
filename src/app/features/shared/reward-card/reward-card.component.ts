@@ -11,6 +11,8 @@ export class RewardCardComponent {
 
   @Input() totalPoints: number = 1000;
   @Input() redeemed: boolean = false;
+  @Input() image: string = '';
+  @Input() name: string = '';
   currentPoints: number = 328;
 
   navigateToRewardDetail(): void {
