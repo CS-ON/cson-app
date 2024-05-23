@@ -9,6 +9,7 @@ export interface Business {
   type: BusinessType;
   suscription?: Suscription;
   schedule: string;
+  logo: string;
   gallery?: string[];
   location: string;
   rewards: Reward[]
