@@ -1,5 +1,7 @@
+import { ViewportScroller } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Router, RouterModule, Routes, Scroll } from '@angular/router';
+import { filter } from 'rxjs';
 
 const routes: Routes = [
   {
@@ -43,7 +45,27 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled', // Esta opción restaura la posición del scroll
+    anchorScrolling: 'enabled' // Esta opción permite el scrolling a anclas
+  })],
   exports: [RouterModule],
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+  constructor(private viewportScroller: ViewportScroller, router: Router) {
+    router.events.pipe(
+      filter((e): e is Scroll => e instanceof Scroll)
+    ).subscribe(e => {
+      if (e.position) {
+        // Cuando se navega hacia atrás o hacia adelante, restaura la posición del scroll
+        this.viewportScroller.scrollToPosition(e.position);
+      } else if (e.anchor) {
+        // Cuando se navega a una ancla, hace scroll a la ancla
+        this.viewportScroller.scrollToAnchor(e.anchor);
+      } else {
+        // Cuando se navega a una nueva página, sube al inicio
+        this.viewportScroller.scrollToPosition([0, 0]);
+      }
+    });
+  }
+}

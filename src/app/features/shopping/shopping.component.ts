@@ -11,6 +11,8 @@ import { Observable } from 'rxjs';
 })
 export class ShoppingComponent {
 
+  menuOpen = false;
+
   businesses$!: Observable<Business[]>;
 
   options: Leaflet.MapOptions = {
@@ -24,7 +26,7 @@ export class ShoppingComponent {
     this.businesses$ = this.dataService.getBusinesses();
   }
 
-  menuOpen = false;
+
 
   isMenuOpen(isToggled: boolean): void {
     this.menuOpen = isToggled;

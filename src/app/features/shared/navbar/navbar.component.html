@@ -14,8 +14,8 @@
   </div>
 </div>
 <div class="fixed inset-0 bg-gray-800 bg-opacity-75 z-40" *ngIf="menuOpen" (click)="toggleMenu()"></div>
-<div class="text-white justify-between flex flex-col fixed inset-0 bg-dark z-50 transform transition-transform duration-300"
-     [ngClass]="{'translate-x-0': menuOpen, 'translate-x-full': !menuOpen}">
+<div class="text-white justify-between flex flex-col fixed inset-0 bg-dark z-50 transform "
+     [ngClass]="{'translate-x-0 transition-transform duration-300': menuOpen, 'translate-x-full ': !menuOpen}">
   <div>
     <div class="flex items-center justify-center py-4">
       <img class="max-w-[57px] h-auto" src="assets/img/logo.png" />
